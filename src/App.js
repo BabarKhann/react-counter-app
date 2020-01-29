@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Stats from "./components/Stats";
+import Buttons from "./components/Buttons";
 
 class App extends Component {
   state = {
@@ -24,8 +25,7 @@ class App extends Component {
       <div>
         <h2>Counter</h2>
         <Stats counter={this.state.counter} />
-        <button onClick={this.inc}>Inc +</button>
-        <button onClick={this.dec}>Dec -</button>
+        <Buttons inc={this.inc} dec={this.dec} />
       </div>
     );
   }
