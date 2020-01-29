@@ -15,10 +15,23 @@ class App extends Component {
   };
 
   dec = () => {
+    if (!this.checkCounter()) {
+      alert("Counter can't decrease more than 0");
+      return;
+    }
+
     this.setState({
       counter: this.state.counter - 1
     });
   };
+
+  checkCounter() {
+    const { counter } = this.state;
+    if (counter > 0) {
+      return true;
+    }
+    return false;
+  }
 
   render() {
     return (
