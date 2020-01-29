@@ -11,13 +11,19 @@ class App extends Component {
     });
   };
 
+  dec = () => {
+    this.setState({
+      counter: this.state.counter - 1
+    });
+  };
+
   render() {
     return (
       <div>
         <h2>Counter</h2>
         <p>{this.state.counter}</p>
         <button onClick={this.inc}>Inc +</button>
-        <button>Dec -</button>
+        <button onClick={this.dec}>Dec -</button>
       </div>
     );
   }
