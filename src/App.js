@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Stats from "./components/Stats";
+
 class App extends Component {
   state = {
     counter: 0
@@ -21,7 +23,7 @@ class App extends Component {
     return (
       <div>
         <h2>Counter</h2>
-        <p>{this.state.counter}</p>
+        <Stats counter={this.state.counter} />
         <button onClick={this.inc}>Inc +</button>
         <button onClick={this.dec}>Dec -</button>
       </div>
